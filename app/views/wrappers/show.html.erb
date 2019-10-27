@@ -1,0 +1,19 @@
+<h1>Word Wrap Project!</h1>
+<h3>Author: Lydia Akuaku</h3>
+<p>
+ Enter a string of your choice and enter/select a number which represents the column number per line such that no line is longer than that number. <br />
+ The output will be display in the output textarea.
+</p>
+
+<div>
+<%= form_with local: true, class: "form" do |f| %>
+  <%= f.label :inputLabel, "Your string:" %>
+  <%= f.text_area :inputText, size: "18x1" %><br /><br />
+  <%= f.label :colNumberLabel, "Column number:" %>
+  <%= f.number_field :colNumber, min: 1 %><br /><br />
+  <%= f.submit "Run" %><br /><br />
+  <%= text_area_tag :outputText, @results, disabled: 'disabled',size: "50x10", placeholder: "Results:" %>
+<% end %>
+</div>
+
+
