@@ -1,13 +1,4 @@
 class Wrapper < ApplicationRecord
-   # include ActiveModel::Validations
- # include ActiveModel::Model
-  # include ActiveModel::Conversion
- #  extend ActiveModel::Naming
-
-  #attr_accessor :inputText, :colNumber
-  
- # validates :inputText, presence: true #length: {minimum: 1}
- # validates :colNumber, presence: true# numericality: {only_integer: true}
  
  def self.wrap(text, colNumber)
   text = text.strip 
