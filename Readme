@@ -2,16 +2,16 @@ Word Wrap Project
 This is a simple application based on Rails framework to wrap a string passed by the user based on a column number that user supplies.
 
 Environment for Development
-Created an environment on AWS Cloud9 for development
+Project was initially developed is AWS Cloud9 environment. But environment was changed so it can be run on a local server.
 
 1. Controller: /word_wrap_app/app/controllers/wrappers_controller.rb
-In the controller, I defined my 'show' action which picks the values entered in the form and then supplies that to the method defiend in the model for wrapping 
+In the controller, I defined my 'show' action which picks the values entered in the form and then supplies that to the method defined in the model for wrapping 
 
 2. Model: /word_wrap_app/app/models/wrapper.rb
 The app does not have any backend database but a model class was created where I defined the method to perform the wrapping 
 
 3. View: /word_wrap_app/app/views/wrappers/show.html.erb
-A form was  created in this file 
+A form was created in this file 
 
 4. Route: /word_wrap_app/app/config/routes.rb
 The routes were put here. The form was posting data back to the same page. So the route does both the GET and POST methods 
@@ -21,3 +21,9 @@ The form was styled using simple css styling in this file
 
 6. Server: /word_wrap_app/app/config/environments/development.rb
 This file was edited to add connection to the local server. 
+
+7. To run this program, run the following commands in terminal
+  - bundle install
+  - rails db:migrate RAILS_ENV=development
+  - rails server
+  - In your browser, go to localhost:3000
